@@ -17,55 +17,55 @@
                 Switch to Search Mode
             </button>
         </header>
-    </div>
-    <main class="app-main">
-        <section class="panel panel-left">
-            <!-- Форма добавления фильма в список просмотренных -->
-            <form id="add-movie-form" class="for">
-                <div class="form__group">
-                    <label for="add-title">Movie Title</label>
-                    <input type="text" id="add-title" name="title" required placeholder="For Example 'Fight Club'...">
-                </div>
-                <div class="form__group">
-                    <label for="add-date">Choose Release Date:</label>
-                    <input type="date" id="add-date" name="releaseDate" required >
-                </div>
-                
-                <div class="form__group">
-                    <label for="add-rating">Rating (from 1 to 5)</label>
-                    <div class="range-wrapper">
-                        <input type="range" id="add-rating" name="rating" min="1" max="5" value="5" step="1" required>
-                        <output id="rating-value" for="add-rating">5</output>
+        <main class="app-main">
+            <section class="panel panel-left">
+                <!-- Форма добавления фильма в список просмотренных -->
+                <form id="add-movie-form" class="for">
+                    <div class="form__group">
+                        <label for="add-title">Movie Title</label>
+                        <input type="text" id="add-title" name="title" required placeholder="For Example 'Fight Club'...">
                     </div>
-                </div>
+                    <div class="form__group">
+                        <label for="add-date">Choose Release Date:</label>
+                        <input type="date" id="add-date" name="releaseDate" required >
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="add-rating">Rating (from 1 to 5)</label>
+                        <div class="range-wrapper">
+                            <input type="range" id="add-rating" name="rating" min="1" max="5" value="5" step="1" required>
+                            <output id="rating-value" for="add-rating">5</output>
+                        </div>
+                    </div>
 
-                <div class="form__group">
-                    <label for="add-review">Your own opinion:</label>
-                    <textarea id="add-review" name="review" rows="4" placeholder="Describe what you liked/didn'r like or something else..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn--primary">
-                    Add Movie
-                </button>
-            </form>
+                    <div class="form__group">
+                        <label for="add-review">Your own opinion:</label>
+                        <textarea id="add-review" name="review" rows="4" placeholder="Describe what you liked/didn'r like or something else..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">
+                        Add Movie
+                    </button>
+                </form>
 
-            <form id="search-movie-form" class="form hidden">
-                <div class="form__group">
-                    <label for="search-id">Movie's ID</label>
-                    <input type="text" id="search-id" name="id" requiredd placeholder="Enter ID for search">
-                </div>
+                <form id="search-movie-form" class="form hidden">
+                    <div class="form__group">
+                        <label for="search-id">Movie's ID</label>
+                        <input type="text" id="search-id" name="id" requiredd placeholder="Enter ID for search">
+                    </div>
 
-                <button type="submit" class="btn btn--primary">
-                    Search Movie
-                </button>
-            </form>
-        </section>
-        <section class="panel panel-right">
-            <h2>Information</h2>
-            <div id="result-container" class="result">
-                <p class="result__placeholder">Information about the added or found movie will appear here.</p>
-            </div>
-        </section>
-    </main>
+                    <button type="submit" class="btn btn--primary">
+                        Search Movie
+                    </button>
+                </form>
+            </section>
+            <section class="panel panel-right">
+                <h2>Information</h2>
+                <div id="result-container" class="result">
+                    <p class="result__placeholder">Information about the added or found movie will appear here.</p>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
