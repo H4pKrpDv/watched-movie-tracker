@@ -10,11 +10,11 @@
     <div class="app">
         <header class="app-header">
             <div class="app-header__titles">
-                <h1 class="app-header_title">Watched Movie Tracker</h1>
+                <h1 class="app-header_title"><a href="/">Watched Movie Tracker</a></h1>
                 <p class="app-header__subtitle">Add the movie to your watched list or find a movie you have already added</p>
             </div>
 
-            <button type="button" id="toggle-mode-btn" class="btn btn--secondary">
+            <button type="button" id="toggle-mode-btn" class="btn btn--secondary" data-mode="add">
                 Switch to Search Mode
             </button>
         </header>
@@ -22,6 +22,7 @@
             <section class="panel panel--left">
                 <!-- Форма добавления фильма в список просмотренных -->
                 <form id="add-movie-form" class="form">
+                    <h2 class="form__header">Add Movie</h2>
                     <div class="form__group">
                         <label for="add-title">Movie Title</label>
                         <input type="text" id="add-title" class="form__input form__input--text" name="title" required placeholder="For Example 'Fight Club'...">
@@ -50,9 +51,10 @@
                 </form>
 
                 <form id="search-movie-form" class="form hidden">
+                    <h2 class="form__header">Search Movie</h2>
                     <div class="form__group">
                         <label for="search-id">Movie's ID</label>
-                        <input type="text" id="search-id" class="form__input form__input--text" name="id" requiredd placeholder="Enter ID for search">
+                        <input type="text" id="search-id" class="form__input form__input--text" name="id" required placeholder="Enter ID for search">
                     </div>
 
                     <button type="submit" class="btn btn--primary">
@@ -68,5 +70,6 @@
             </section>
         </main>
     </div>
+    <script src="main.js" defer></script>
 </body>
 </html>
