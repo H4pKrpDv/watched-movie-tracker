@@ -16,6 +16,11 @@
     --border-hover: 2px solid #a5a7ac;
 }
 
+a {
+    text-decoration: none; /* убираем подчёркивание */
+    color: inherit; /* наследование цвета текста от родительского элемента */
+}
+
 /* мобильная верстка */
 .app {
     display: flex;
