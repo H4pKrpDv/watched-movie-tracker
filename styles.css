@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg-main: #121824;
+    --color-bg-panel: #1E2640;
+    --color-primary: #E50914;
+    --color-secondary: #F59E0B;
+    --color-text-main: #F3F4F6;
+    --color-text-muted: #9CA3AF;
+    --color-border: #2E3A59;
+    --border: 2px solid #47484b;
+    --border-hover: 2px solid #a5a7ac;
+}
+
+/* мобильная верстка */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+}
+
+.app-header {
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 1rem;
+}
+
+.app-header__titles {
+    text-align: center;
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.panel {
+    padding: 1.5rem;
+    flex: 1;
+    background-color: var(--color-bg-panel);
+    border: var(--border);
+    border-radius: 1.5rem;
+}
+
+.panel--right {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.3rem;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 100%;
+}
+
+.form__input--text,
+.form__input--date,
+.form__input--textarea {
+    min-width: 100%;
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.form__input--textarea {
+    resize: vertical;
+    min-height: 3rem;
+    max-height: 8rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    border: var(--border);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    border: var(--border-hover);
+}
+
+/* Прячем неактивные элементы */
+.hidden {
+    display: none;
+}
+
+/* десктопная верстка */
+@media (min-width: 768px) {
+    .app-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+   
+    .app-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .panel {
+        overflow-y: auto;
+        /* независимый скролл для каждой панельки */
+    }
+}
